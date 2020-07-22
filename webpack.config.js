@@ -5,6 +5,12 @@ var DEV_SERVER = process.argv[1].indexOf('webpack-dev-server') !== -1;
 var DEV = DEV_SERVER || process.env.DEV;
 
 module.exports = {
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9999
+  },
+  
   mode: DEV ? 'development' : 'production',
   entry: {
     "sampleapp": "./app/bootstrap/bootstrap.js",

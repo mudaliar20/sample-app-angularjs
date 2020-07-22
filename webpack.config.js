@@ -6,6 +6,9 @@ var DEV = DEV_SERVER || process.env.DEV;
 
 module.exports = {
   devServer: {
+    allowedHosts: [
+      'ec2-18-219-165-109.us-east-2.compute.amazonaws.com'
+    ],
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9999
